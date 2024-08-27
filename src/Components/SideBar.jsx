@@ -4,14 +4,28 @@ import { BsList, BsXLg } from "react-icons/bs";
 import { GiAnatomy } from "react-icons/gi";
 import { Link } from "react-router-dom";
 
-export default function SideBar() {
+export default function SideBar() 
+{
 
     const [open, setOpen] = useState(true);
-    const Webpages = [
-        { title: "Wiki 3D", link: "/", icon: <AiOutlineDoubleLeft /> },
-        { title: "Animals", link: "/page2", icon: <AiOutlineDoubleLeft /> },
-        { title: "Antatomy", link: "/anatomy", icon: <GiAnatomy /> }
-    ];
+    const WebPages = [
+        {
+            title: "Wiki 3D",
+            link: "/",
+            icon: <AiOutlineUnderline />
+        },
+        {
+            title: "Animals",
+            link: "/page2",
+            icon: <AiOutlineDoubleLeft />
+        },
+        {
+            title: "Anatomy",
+            link: "/anatomy",
+            icon: <GiAnatomy />
+        }
+    ]
+
 
     return (
         <div className={`h-full bg-black text-3xl w-fit rounded-e-3xl flex flex-col`}>
@@ -20,9 +34,9 @@ export default function SideBar() {
                 {!open ? <BsList /> : <BsXLg />}
             </div>
             <ul className={`mt-10 p-3`}>
-                {Webpages.map((page, index) => (
+                {WebPages.map((page, index) => (
                     <Link to={page.link}>
-                        <li key={index} className={`font-bold text-center mb-5 text-white bg-slate-400 border-white cursor-pointer flex flex-row rounded-xl ${!open ? "w-fit" : "min-w-max"}`}>
+                        <li key={index + 1} className={`font-bold text-center mb-5 text-white bg-slate-400 border-white cursor-pointer flex flex-row rounded-xl ${!open ? "w-fit" : "min-w-max"}`}>
                             <div className={`text-center text-4xl h-fit w-fit p-1 m-2`}>{page.icon}</div>
                             {open && <span className={`text-xl content-center m-3 p-1`}> {page.title}</span>}
                         </li>
