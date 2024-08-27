@@ -11,11 +11,11 @@ export default function App() {
                 <div className={`h-full`}>
                     <SideBar />
                 </div>
-                <div className={`h-full w-full`}>
+                <div className={`w-full h-full p-5 rounded-3xl`}>
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/page2" element={<Page2 />} />
-                        <Route path="/page3" element={<Page3 />} />
+                        <Route path="/anatomy" element={<Page3 />} />
                     </Routes>
                 </div>
             </div>

@@ -1,32 +1,35 @@
 import { useState } from "react"
-import { AiOutlineDoubleLeft } from "react-icons/ai"
+import { AiOutlineDoubleLeft, AiOutlineUnderline } from "react-icons/ai"
+import { BsList, BsXLg } from "react-icons/bs";
+import { GiAnatomy } from "react-icons/gi";
 import { Link } from "react-router-dom";
 
 export default function SideBar() {
 
     const [open, setOpen] = useState(true);
     const Webpages = [
-        { title: "Wiki 3D", link: "/" },
-        { title: "Animals", link: "/page2" },
-        { title: "Bones", link: "/page3" }
+        { title: "Wiki 3D", link: "/", icon: <AiOutlineDoubleLeft /> },
+        { title: "Animals", link: "/page2", icon: <AiOutlineDoubleLeft /> },
+        { title: "Antatomy", link: "/anatomy", icon: <GiAnatomy /> }
     ];
 
     return (
-        <div className={`h-full bg-black text-3xl ${open ? "w-64" : "w-20"} duration-700 flex flex-col`}>
-            <div className={`mt-5`}>
-                <AiOutlineDoubleLeft className={`text-4xl p-2 ml-3 text-center text-black bg-white border rounded-full cursor-pointer ${!open && "rotate-180"} duration-700`}
-                    onClick={() => { setOpen(!open); }}
-                />
+        <div className={`h-full bg-black text-3xl w-fit rounded-e-3xl flex flex-col`}>
+            <div className={`text-3xl p-2 m-3 text-center w-fit text-black bg-white rounded-full cursor-pointer`}
+                onClick={() => { setOpen(!open); }}>
+                {!open ? <BsList /> : <BsXLg />}
             </div>
-            <div>
-                <ul className="pt-10">
-                    {Webpages.map((page, index) => (
-                        <li key={index} className={`text-white text-left p-2 mb-8 cursor-pointer text-2xl`}>
-                            <Link to={page.link}> {page.title} </Link>
+            <ul className={`mt-10`}>
+                {Webpages.map((page, index) => (
+                    <Link to={page.link}>
+                        <li key={index} className={`m-3 p-2 font-bold text-center mb-5 min-w-max text-white bg-slate-400 border-white cursor-pointer text-lg flex flex-row`}>
+                            <div className={`text-center h-fit w-fit m-1`}>{page.icon}</div>
+                            {open && <span className={`ml-3 pr-12`}> {page.title}</span>}
                         </li>
-                    ))}
-                </ul>
-            </div>
+                    </Link>
+                ))}
+            </ul>
         </div>
+
     )
 }
