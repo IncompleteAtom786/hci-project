@@ -14,7 +14,7 @@ export default function App() {
                 <div className={`w-full h-full p-5 rounded-3xl`}>
                     <Routes>
                         <Route path="/" element={<Home />} />
-                        <Route path="/page2" element={<Page2 />} />
+                        <Route path="/animals" element={<Page2 />} />
                         <Route path="/anatomy" element={<Page3 />} />
                     </Routes>
                 </div>
