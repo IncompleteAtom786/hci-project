@@ -1,13 +1,9 @@
 import { useState } from "react"
-import { AiOutlineDoubleLeft, AiOutlineUnderline } from "react-icons/ai"
 import { TbRotate3D } from "react-icons/tb";
-import { SiAnimalplanet } from "react-icons/si";
+import { SiAnimalplanet, SiFossilscm} from "react-icons/si";
 import { BsList, BsXLg } from "react-icons/bs";
-import { SiFossilscm } from "react-icons/si";
-import { GiAnatomy } from "react-icons/gi";
-import { GiDinosaurBones } from "react-icons/gi";
+import { GiDinosaurBones, GiAnatomy} from "react-icons/gi";
 import { TbMicroscope } from "react-icons/tb";
-
 import { Link } from "react-router-dom";
 
 export default function SideBar() {
@@ -56,7 +52,7 @@ export default function SideBar() {
                 <ul>
                     {WebPages.map((page, index) => (
                         <Link to={page.link}>
-                            <li key={index + 1} className={`shadow-lg ease-in shadow-slate-300 font-bold text-center mb-5 text-white bg-black border-white cursor-pointer flex flex-row rounded-xl ${!open ? "w-fit" : "min-w-max"}`}>
+                            <li key={page.title} className={`shadow-lg ease-in shadow-slate-300 font-bold text-center mb-5 text-white bg-black border-white cursor-pointer flex flex-row rounded-xl ${!open ? "w-fit" : "min-w-max"}`}>
                                 <div className={`text-center text-4xl h-fit w-fit p-1 m-2`}>{page.icon}</div>
                                 {open && <span className={`text-xl content-center m-3 p-1`}>{page.title}</span>}
                             </li>
