@@ -40,46 +40,6 @@ export default function SideBar()
             title: "Instruments",
             link: "/instruments",
             icon: <TbMicroscope />
-        },
-        {
-            title: "Instruments",
-            link: "/instruments",
-            icon: <TbMicroscope />
-        },
-        {
-            title: "Wiki 3D",
-            link: "/",
-            icon: <TbRotate3D />
-        },
-        {
-            title: "Animals",
-            link: "/animals",
-            icon: <SiAnimalplanet />
-        },
-        {
-            title: "Anatomy",
-            link: "/anatomy",
-            icon: <GiAnatomy />
-        },
-        {
-            title: "Fossils",
-            link: "/fossils",
-            icon: <SiFossilscm />
-        },
-        {
-            title: "Bones",
-            link: "/bones",
-            icon: <GiDinosaurBones />
-        },
-        {
-            title: "Instruments",
-            link: "/instruments",
-            icon: <TbMicroscope />
-        },
-        {
-            title: "Instruments",
-            link: "/instruments",
-            icon: <TbMicroscope />
         }
     ]
 
