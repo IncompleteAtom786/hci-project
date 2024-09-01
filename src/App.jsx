@@ -1,21 +1,22 @@
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SideBar from "./Components/SideBar"
 import Home from "./Pages/Home";
-import Page2 from "./Pages/Page2";
-import Page3 from "./Pages/Pages3";
+import Animals from "./Pages/Animals";
+import Anatomy from "./Pages/Anatomy";
 
-export default function App() {
+export default function App() 
+{
     return (
         <BrowserRouter>
-            <div className={`flex flex-row text-center w-screen h-screen`}>
-                <div className={`h-full`}>
+            <div className={`text-center min-h-full min-w-full bg-black bg-gradient-to-bl flex flex-row`}>
+                <div className={`min-h-full h-fit w-fit bg-cyan-800 p-4 flex flex-col items-center rounded-e-3xl`}>
                     <SideBar />
                 </div>
-                <div className={`w-full h-full p-5 rounded-3xl`}>
+                <div className={`min-h-full w-full m-3 rounded-3xl bg-red-300`}>
                     <Routes>
                         <Route path="/" element={<Home />} />
-                        <Route path="/animals" element={<Page2 />} />
-                        <Route path="/anatomy" element={<Page3 />} />
+                        <Route path="/animals" element={<Animals />} />
+                        <Route path="/anatomy" element={<Anatomy />} />
                     </Routes>
                 </div>
             </div>

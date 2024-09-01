@@ -1,14 +1,15 @@
 import { useState } from "react"
 import { TbRotate3D } from "react-icons/tb";
-import { SiAnimalplanet, SiFossilscm} from "react-icons/si";
+import { SiAnimalplanet, SiFossilscm } from "react-icons/si";
 import { BsList, BsXLg } from "react-icons/bs";
-import { GiDinosaurBones, GiAnatomy} from "react-icons/gi";
+import { GiDinosaurBones, GiAnatomy } from "react-icons/gi";
 import { TbMicroscope } from "react-icons/tb";
 import { Link } from "react-router-dom";
 
-export default function SideBar() {
+export default function SideBar() 
+{
 
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
     const WebPages = [
         {
             title: "Wiki 3D",
@@ -39,27 +40,67 @@ export default function SideBar() {
             title: "Instruments",
             link: "/instruments",
             icon: <TbMicroscope />
+        },
+        {
+            title: "Instruments",
+            link: "/instruments",
+            icon: <TbMicroscope />
+        },
+        {
+            title: "Wiki 3D",
+            link: "/",
+            icon: <TbRotate3D />
+        },
+        {
+            title: "Animals",
+            link: "/animals",
+            icon: <SiAnimalplanet />
+        },
+        {
+            title: "Anatomy",
+            link: "/anatomy",
+            icon: <GiAnatomy />
+        },
+        {
+            title: "Fossils",
+            link: "/fossils",
+            icon: <SiFossilscm />
+        },
+        {
+            title: "Bones",
+            link: "/bones",
+            icon: <GiDinosaurBones />
+        },
+        {
+            title: "Instruments",
+            link: "/instruments",
+            icon: <TbMicroscope />
+        },
+        {
+            title: "Instruments",
+            link: "/instruments",
+            icon: <TbMicroscope />
         }
     ]
 
     return (
-        <div className={`h-full bg-slate-600 text-3xl w-fit rounded-e-3xl flex flex-col`}>
-            <div className={`text-3xl p-2 m-3 w-fit ml-4 text-black bg-white rounded-full cursor-pointer`}
+        <>
+            <div className={`text-4xl text-center self-start text-white rounded-e-full -ml-6 p-3 -mt-4 cursor-pointer w-fit h-fit`}
                 onClick={() => { setOpen(!open); }}>
                 {!open ? <BsList /> : <BsXLg />}
             </div>
-            <div className={`mt-10 p-3`}>
+            <div className={`mt-16`}>
                 <ul>
-                    {WebPages.map((page, index) => (
+                    {WebPages.map((page) => (
                         <Link to={page.link}>
-                            <li key={page.title} className={`shadow-lg ease-in shadow-slate-300 font-bold text-center mb-5 text-white bg-black border-white cursor-pointer flex flex-row rounded-xl ${!open ? "w-fit" : "min-w-max"}`}>
-                                <div className={`text-center text-4xl h-fit w-fit p-1 m-2`}>{page.icon}</div>
-                                {open && <span className={`text-xl content-center m-3 p-1`}>{page.title}</span>}
+                            <li key={page.title} className={`shadow-lg shadow-stone-900 font-bold text-white bg-black border-white cursor-pointer flex flex-row rounded-xl min-w-max min-h-max mb-6 p-3`}>
+                                <div className={`text-4xl`}>{page.icon}</div>
+                                {open && <div className={`text-xl pl-8 p-1`}>{page.title}</div>}
                             </li>
                         </Link>
                     ))}
                 </ul>
             </div>
-        </div>
+        </>
     )
 }
