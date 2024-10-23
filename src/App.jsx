@@ -4,7 +4,7 @@ import Home from "./Pages/Home";
 import Animals from "./Pages/Animals";
 import Anatomy from "./Pages/Anatomy";
 
-export default function App() 
+export default function App()
 {
     return (
         <BrowserRouter>
@@ -12,7 +12,7 @@ export default function App()
                 <div className={`min-h-full max-w-fit bg-cyan-800 p-3 flex flex-col items-center rounded-e-3xl mr-5`}>
                     <SideBar />
                 </div>
-                <div className={`min-h-full w-full rounded-xl bg-red-300 mr-1`}>
+                <div className={`min-h-full w-full rounded-xl bg-black mr-1`}>
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/animals" element={<Animals />} />

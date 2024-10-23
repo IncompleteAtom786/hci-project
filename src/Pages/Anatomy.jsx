@@ -1,6 +1,6 @@
 export default function Anatomy() {
     return (
-        <div className="min-h-screen w-screen flex flex-col gap-4 items-center">
+        <div className="min-h-full w-full flex flex-col gap-4 items-center">
             <h1 className="text-4xl font-bold p-4">Scientific Equipment</h1>
             <div className="grid grid-cols-3 gap-4 p-4">
                 <div className="bg-white p-4 rounded-lg shadow-lg">
@@ -16,7 +16,7 @@ export default function Anatomy() {
                     <p className="text-4xl font-bold">30</p>
                 </div>
             </div>
-            <div className="flex gap-4 p-4 h-12 block">
+            <div className="flex gap-4 p-4 h-12">
                 <model-viewer style={{ height: "400px" }} src="models/robert_hookes_microscope.glb" alt="A 3D model" auto-rotate camera-controls></model-viewer>
                 <div className="bg-white p-6 rounded-lg shadow-lg h-96 w-96 flex flex-col justify-center">
                     <h2 className="text-2xl font-bold">Robert Hooke&apos;s Microscope</h2>
