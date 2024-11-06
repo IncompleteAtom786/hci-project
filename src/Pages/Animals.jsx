@@ -1,8 +1,10 @@
-export default function Animals() 
+export default function Animals()
 {
     return (
         <>
-            <div className="bg-white w-fit">Page 2</div>
+            <div className="w-full bg-emerald-950 min-h-full">
+                Page 2
+            </div>
         </>
 
     )

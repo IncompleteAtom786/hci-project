@@ -52,7 +52,7 @@ export default function SideBar()
 
     return (
         <>
-            <div className={`text-3xl text-center self-start text-white rounded-e-full -ml-3 p-3 -mt-4 cursor-pointer w-fit h-fit`}
+            <div className={`text-3xl text-center self-start text-white mt-2 cursor-pointer w-100% h-fit`}
                 onClick={() => { setOpen(!open); }}>
                 {!open ? <BsList /> : <BsXLg />}
             </div>
@@ -60,9 +60,9 @@ export default function SideBar()
                 <ul>
                     {WebPages.map((page) => (
                         <Link to={page.link}>
-                            <li className={`shadow-lg shadow-stone-900 font-bold text-white bg-black border-white cursor-pointer flex flex-row rounded-xl min-w-max min-h-max mb-6 p-2`}>
-                                <div className={`text-4xl`}>{page.icon}</div>
-                                {open && <div className={`text-md pl-8 p-1`}>{page.title}</div>}
+                            <li className={`shadow-lg shadow-stone-900 font-bold text-white bg-black border-white cursor-pointer flex flex-row rounded-xl min-w-max h-fit ml-0 mb-6 p-2 justify-start content-center`}>
+                                <div className={`text-3xl pr-3 `}>{page.icon}</div>
+                                {open && <div className={`text-md content-center`}>{page.title}</div>}
                             </li>
                         </Link>
                     ))}

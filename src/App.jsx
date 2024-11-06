@@ -9,7 +9,7 @@ export default function App()
     return (
         <BrowserRouter>
             <div className={`text-center max-w-screen h-fit min-h-screen bg-black bg-gradient-to-bl flex flex-row py-2`}>
-                <div className={`min-h-full max-w-fit bg-cyan-800 p-3 flex flex-col items-center rounded-e-3xl mr-5`}>
+                <div className={`min-h-full max-w-fit bg-emerald-400 p-3 flex flex-col items-center rounded-e-3xl mr-5`}>
                     <SideBar />
                 </div>
                 <div className={`min-h-full w-full rounded-xl bg-black mr-1`}>
