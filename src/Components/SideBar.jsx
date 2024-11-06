@@ -61,7 +61,7 @@ export default function SideBar()
                     {WebPages.map((page) => (
                         <Link to={page.link}>
                             <li className={`shadow-lg shadow-stone-900 font-bold text-white bg-black border-white cursor-pointer flex flex-row rounded-xl min-w-max h-fit ml-0 mb-6 p-2 justify-start content-center`}>
-                                <div className={`text-3xl pr-3 `}>{page.icon}</div>
+                                <div className={`text-3xl ${open && "pr-3"}`}>{page.icon}</div>
                                 {open && <div className={`text-md content-center`}>{page.title}</div>}
                             </li>
                         </Link>

@@ -1,4 +1,4 @@
-// src/hooks/useModel.js
+
 export const useModel = (modelKey) => {
   const fetchModel = async () => {
     try {
