@@ -3,6 +3,9 @@ import SideBar from "./Components/SideBar"
 import Home from "./Pages/Home";
 import Animals from "./Pages/Animals";
 import Anatomy from "./Pages/Anatomy";
+import Fossils from "./Pages/Fossils";
+import Instruments from "./Pages/Instruments";
+import Bones from "./Pages/Bones";
 
 export default function App()
 {
@@ -17,6 +20,10 @@ export default function App()
                         <Route path="/" element={<Home />} />
                         <Route path="/animals" element={<Animals />} />
                         <Route path="/anatomy" element={<Anatomy />} />
+                        <Route path="/fossils" element={<Fossils />} />
+                        <Route path="/instruments" element={<Instruments />} />
+                        <Route path="/bones" element={<Bones />} />
+
                     </Routes>
                 </div>
             </div>
